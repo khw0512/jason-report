@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 
-const SECRET = process.env.JWT_SECRET || 'roam-report-secret';
+const SECRET = process.env.JWT_SECRET || 'jason-report-secret';
 
 function requireAuth(req, res, next) {
   const header = req.headers.authorization;
