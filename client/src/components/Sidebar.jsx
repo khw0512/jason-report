@@ -47,7 +47,7 @@ const NAV_ITEMS = [
   { label: "Home", to: "/" },
   { label: "Articles", to: "/articles" },
   { label: "About", to: "/about" },
-  { label: "Write", to: "/admin" },
+  //{ label: "Write", to: "/admin" },
 ];
 
 export default function Sidebar({ settings }) {
