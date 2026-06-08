@@ -141,7 +141,8 @@ export default function Sidebar({ settings }) {
         {/* Tagline */}
         <p
           style={{
-            fontFamily: "'Lora', serif",
+            fontFamily: "paperlogy",
+            fontWeight:500,
             fontSize: "15px",
             color: TITLE_COLOR,
             textAlign: "center",
@@ -149,9 +150,11 @@ export default function Sidebar({ settings }) {
             maxWidth: "240px",
           }}
         >
-          Stories and photos of long walks,
+          한 번도 빛난 적 없었던
           <br />
-          wrong turns, and everyday discoveries
+          미지의 향으로
+          <br />
+          온 세상을 물들여
         </p>
       </div>
 
