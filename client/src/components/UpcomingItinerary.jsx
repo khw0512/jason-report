@@ -27,7 +27,7 @@ const DEFAULT_ITEMS = [
   },
   {
     id: 4, order_num: 4,
-    destination: 'Kagoshima', country: 'Japan',
+    destination: 'Seoul', country: 'South Korea',
     start_date: 'Dec 3', end_date: 'Dec 21',
     description: 'Admire Sakurajima from the ferry',
     image_url: 'https://images.unsplash.com/photo-1580956284941-8e0f7e4a0290?w=300&q=80',
