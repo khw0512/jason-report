@@ -22,15 +22,7 @@ const WaveBottom = () => (
 
 const Row = ({ label, children, isLast }) => (
   <>
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "220px 1fr",
-        gap: "40px",
-        padding: "44px 0",
-        alignItems: "start",
-      }}
-    >
+    <div className="about-row">
       {/* Left: section label */}
       <h2
         style={{
@@ -70,15 +62,7 @@ export default function AboutPage() {
             paddingTop: "60px",
           }}
         >
-          <div
-            style={{
-              width: "680px",
-              height: "680px",
-              borderRadius: "50%",
-              overflow: "hidden",
-              flexShrink: 0,
-            }}
-          >
+          <div className="about-portrait">
             <img
               src="/images/main.jpeg"
               alt="Jason — The Roam Report"
@@ -88,13 +72,7 @@ export default function AboutPage() {
         </div>
 
         {/* Text rows */}
-        <div
-          style={{
-            maxWidth: "900px",
-            margin: "0 auto",
-            padding: "60px 60px 0",
-          }}
-        >
+        <div className="about-rows">
           <Row label="About">
             <p
               style={{

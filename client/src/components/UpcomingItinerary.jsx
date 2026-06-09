@@ -41,24 +41,13 @@ function pad(n) {
 function ItineraryItem({ item, isLast }) {
   return (
     <>
-      <div
-        style={{
-          display: 'flex',
-          alignItems: 'center',
-          gap: '32px',
-          padding: '32px 0',
-        }}
-      >
+      <div className="itinerary-item">
         {/* Number */}
         <span
+          className="itinerary-num"
           style={{
-            fontFamily: "'Fraunces', serif",
-            fontSize: '72px',
-            fontWeight: 300,
             color: ACCENT,
             opacity: 0.6,
-            lineHeight: 1,
-            minWidth: '90px',
           }}
         >
           {pad(item.order_num)}
@@ -99,15 +88,7 @@ function ItineraryItem({ item, isLast }) {
         </div>
 
         {/* Image */}
-        <div
-          style={{
-            width: '140px',
-            height: '120px',
-            borderRadius: '50%',
-            overflow: 'hidden',
-            flexShrink: 0,
-          }}
-        >
+        <div className="itinerary-img">
           <img
             src={item.image_url}
             alt={item.destination}
@@ -144,7 +125,7 @@ export default function UpcomingItinerary({ items }) {
   return (
     <>
       <WaveTop />
-      <section style={{ background: SECTION_BG, padding: '20px 60px 80px' }}>
+      <section className="section-itinerary" style={{ background: SECTION_BG }}>
         <h2
           style={{
             fontFamily: "'Fraunces', serif",

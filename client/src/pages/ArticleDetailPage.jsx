@@ -112,7 +112,7 @@ function LatestStories({ currentId }) {
   if (!articles.length) return null;
 
   return (
-    <div style={{ background: "#4E5E28", padding: "60px 60px 80px" }}>
+    <div className="detail-latest-section" style={{ background: "#4E5E28" }}>
       <h2
         style={{
           fontFamily: "'Fraunces', serif",
@@ -125,15 +125,7 @@ function LatestStories({ currentId }) {
       >
         Latest travel stories
       </h2>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(2, 1fr)",
-          gap: "24px",
-          maxWidth: "900px",
-          margin: "0 auto",
-        }}
-      >
+      <div className="detail-latest-grid">
         {articles.map((a) => (
           <LatestCard key={a.id} article={a} />
         ))}
@@ -271,14 +263,7 @@ export default function ArticleDetailPage() {
       </div>
 
       {/* Title + meta */}
-      <div
-        style={{
-          maxWidth: "620px",
-          margin: "0 auto",
-          padding: "52px 40px 0",
-          textAlign: "center",
-        }}
-      >
+      <div className="detail-content">
         <h1
           style={{
             fontFamily: "'Fraunces', serif",
@@ -323,7 +308,7 @@ export default function ArticleDetailPage() {
       </div>
 
       {/* Article body */}
-      <div style={{ maxWidth: "620px", margin: "0 auto", padding: "0 40px" }}>
+      <div className="detail-body">
         {body.map((block, i) => {
           if (block.type === "p") {
             return (
@@ -362,7 +347,7 @@ export default function ArticleDetailPage() {
       </div>
 
       {/* End decoration */}
-      <div style={{ maxWidth: "620px", margin: "0 auto", padding: "0 40px" }}>
+      <div className="detail-body">
         <div
           style={{
             borderTop: "1px dashed rgba(0,0,0,0.15)",

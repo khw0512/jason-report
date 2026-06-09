@@ -73,9 +73,9 @@ function Layout() {
   }
 
   return (
-    <div style={{ display: 'flex', height: '100vh', overflow: 'hidden' }}>
+    <div className="app-layout">
       <Sidebar settings={settings} />
-      <main style={{ flex: 1, overflowY: 'auto', overflowX: 'hidden' }}>
+      <main className="app-main">
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/articles" element={<ArticlesPage />} />

@@ -56,30 +56,19 @@ export default function Sidebar({ settings }) {
   const repeated = tickerText.repeat(4);
 
   return (
-    <aside
-      style={{
-        width: "390px",
-        minWidth: "390px",
-        background: SIDEBAR_BG,
-        display: "flex",
-        flexDirection: "column",
-        height: "100vh",
-        position: "relative",
-        overflow: "hidden",
-      }}
-    >
+    <aside className="sidebar" style={{ background: SIDEBAR_BG }}>
+      {/* Mobile-only title */}
+      <span className="sidebar-mobile-title">Amor Fati</span>
+
       {/* Navigation */}
       <nav
+        className="sidebar-nav"
         style={{
-          position: "absolute",
-          top: "20px",
-          left: "20px",
           background: "white",
           borderRadius: "999px",
           padding: "8px 20px",
           display: "flex",
           gap: "20px",
-          zIndex: 10,
           boxShadow: "0 1px 4px rgba(0,0,0,0.08)",
         }}
       >
@@ -106,17 +95,7 @@ export default function Sidebar({ settings }) {
       </nav>
 
       {/* Main content */}
-      <div
-        style={{
-          flex: 1,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          paddingBottom: "60px",
-          gap: "12px",
-        }}
-      >
+      <div className="sidebar-body">
         {/* Title */}
         <h1
           style={{
@@ -160,13 +139,8 @@ export default function Sidebar({ settings }) {
 
       {/* Location ticker at bottom */}
       <div
+        className="sidebar-ticker"
         style={{
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          right: 0,
-          overflow: "hidden",
-          padding: "12px 0",
           background: SIDEBAR_BG,
           borderTop: `1px solid rgba(27,45,181,0.1)`,
         }}

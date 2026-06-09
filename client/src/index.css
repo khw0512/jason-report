@@ -103,6 +103,145 @@ img {
   max-width: 100%;
 }
 
+/* ── App layout ──────────────────────────────────────────────────────────── */
+.app-layout {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+.app-main {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* ── Sidebar ─────────────────────────────────────────────────────────────── */
+.sidebar {
+  width: 390px;
+  min-width: 390px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.sidebar-nav {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+}
+.sidebar-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 60px;
+  gap: 12px;
+}
+.sidebar-ticker {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  padding: 12px 0;
+}
+.sidebar-mobile-title {
+  display: none;
+  font-family: 'Enfolding', serif;
+  font-size: 24px;
+  line-height: 1;
+  color: #1B2DB5;
+}
+
+/* ── Content sections ────────────────────────────────────────────────────── */
+.section-latest { padding: 80px 60px 60px; }
+.section-itinerary { padding: 20px 60px 80px; }
+
+.itinerary-item { display: flex; align-items: center; gap: 32px; padding: 32px 0; }
+.itinerary-num { font-family: 'Fraunces', serif; font-size: 72px; font-weight: 300; line-height: 1; min-width: 90px; }
+.itinerary-img { width: 140px; height: 120px; border-radius: 50%; overflow: hidden; flex-shrink: 0; }
+
+.latest-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
+
+.articles-header { padding: 60px 60px 40px; text-align: center; }
+.articles-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 940px; margin: 0 auto; padding: 0 40px 40px; }
+
+.detail-latest-section { padding: 60px 60px 80px; }
+.detail-latest-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 900px; margin: 0 auto; }
+.detail-content { max-width: 620px; margin: 0 auto; padding: 52px 40px 0; text-align: center; }
+.detail-body { max-width: 620px; margin: 0 auto; padding: 0 40px; }
+
+.about-portrait { width: 680px; height: 680px; border-radius: 50%; overflow: hidden; flex-shrink: 0; }
+.about-rows { max-width: 900px; margin: 0 auto; padding: 60px 60px 0; }
+.about-row { display: grid; grid-template-columns: 220px 1fr; gap: 40px; padding: 44px 0; align-items: start; }
+
+/* ── Mobile ──────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Layout */
+  .app-layout {
+    flex-direction: column;
+    height: auto;
+    min-height: 100dvh;
+    overflow: visible;
+  }
+  .app-main {
+    overflow-y: visible;
+    overflow-x: hidden;
+  }
+
+  /* Sidebar → sticky top header */
+  .sidebar {
+    width: 100%;
+    min-width: unset;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    overflow: visible;
+  }
+  .sidebar-nav {
+    position: static;
+    top: unset;
+    left: unset;
+    box-shadow: none;
+  }
+  .sidebar-body { display: none; }
+  .sidebar-ticker { display: none; }
+  .sidebar-mobile-title { display: block; }
+
+  /* Latest stories */
+  .section-latest { padding: 48px 20px 40px; }
+  .latest-grid { grid-template-columns: 1fr; }
+
+  /* Itinerary */
+  .section-itinerary { padding: 20px 20px 60px; }
+  .itinerary-item { gap: 16px; }
+  .itinerary-num { font-size: 48px; min-width: 56px; }
+  .itinerary-img { width: 80px; height: 80px; }
+
+  /* Articles page */
+  .articles-header { padding: 40px 20px 24px; }
+  .articles-grid { grid-template-columns: 1fr; padding: 0 16px 32px; }
+
+  /* Article detail */
+  .detail-latest-section { padding: 48px 20px 60px; }
+  .detail-latest-grid { grid-template-columns: 1fr; }
+  .detail-content { padding: 32px 20px 0; }
+  .detail-body { padding: 0 20px; }
+
+  /* About page */
+  .about-portrait { width: min(80vw, 340px); height: min(80vw, 340px); }
+  .about-rows { padding: 40px 20px 0; }
+  .about-row { grid-template-columns: 1fr; gap: 16px; padding: 28px 0; }
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;

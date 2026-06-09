@@ -62,7 +62,7 @@ export default function LatestStories({ articles }) {
   const list = articles;
 
   return (
-    <section style={{ background: SECTION_BG, padding: '80px 60px 60px' }}>
+    <section className="section-latest" style={{ background: SECTION_BG }}>
       <h2
         style={{
           fontFamily: "'Fraunces', serif",
@@ -76,15 +76,7 @@ export default function LatestStories({ articles }) {
         Latest travel stories
       </h2>
 
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(2, 1fr)',
-          gap: '24px',
-          maxWidth: '900px',
-          margin: '0 auto',
-        }}
-      >
+      <div className="latest-grid">
         {list.map(article => (
           <ArticleCard key={article.id} article={article} />
         ))}

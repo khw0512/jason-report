@@ -140,7 +140,7 @@ export default function ArticlesPage() {
   return (
     <div style={{ background: "#F2E8D4", minHeight: "100vh" }}>
       {/* Title */}
-      <div style={{ padding: "60px 60px 40px", textAlign: "center" }}>
+      <div className="articles-header">
         <h1
           style={{
             fontFamily: "Fraunces, serif",
@@ -154,16 +154,7 @@ export default function ArticlesPage() {
       </div>
 
       {/* 2-column article grid */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(2, 1fr)",
-          gap: "24px",
-          maxWidth: "940px",
-          margin: "0 auto",
-          padding: "0 40px 40px",
-        }}
-      >
+      <div className="articles-grid">
         {articles.map((article) => (
           <ArticleCard key={article.id} article={article} />
         ))}
